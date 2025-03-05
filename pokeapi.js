@@ -14,9 +14,9 @@ async function fetchPokemonData(pokemonName) {
     
     
     document.addEventListener("DOMContentLoaded", () => {
-    let inputElement = document.getElementById("pokemon");
-    let pokemonInfoElement = document.getElementById("pokemon-info");
-    let searchButton = document.getElementById("fetch-btn");
+        let inputElement = document.getElementById("pokemon");
+        let pokemonInfoElement = document.getElementById("pokemon-info");
+        let searchButton = document.getElementById("fetch-btn");
     
     
     searchButton.addEventListener("click", async () => {  
@@ -36,8 +36,8 @@ async function fetchPokemonData(pokemonName) {
             <h2>${pokemonData.name}</h2>  
             <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">  
             <h3>Abilities:</h3>  
-            <ul>  
-                ${pokemonData.abilities.map(ability => `<li>${[ability.ability.name](`http://ability.ability.name`)}</li>`).join('')}  
+            <ul>   
+                 ${pokemonData.abilities.map(ability => `<li>[${ability.ability.name}]</li>`).join('')}
             </ul>  
             <h3>Base Experience:</h3>  
             <p>${pokemonData.base_experience}</p>  
